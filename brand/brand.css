@@ -1,0 +1,188 @@
+.brand-page {
+  min-height: 100vh;
+}
+
+.brand-hero {
+  padding: var(--spacing-xl) 0 var(--spacing-lg);
+  background:
+    radial-gradient(circle at top left, rgba(193, 119, 103, 0.14), transparent 34rem),
+    linear-gradient(180deg, var(--color-cream) 0%, var(--color-cream-dark) 100%);
+}
+
+.brand-back-link {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  font-family: var(--font-accent);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.brand-back-link::before {
+  content: "<";
+  margin-right: 0.5rem;
+  color: var(--color-accent);
+}
+
+.brand-title {
+  max-width: 760px;
+  margin-top: 0.25rem;
+  font-size: clamp(2.6rem, 8vw, 5rem);
+}
+
+.brand-intro {
+  max-width: 680px;
+  margin-top: var(--spacing-md);
+  color: var(--color-dark-soft);
+  font-size: clamp(1.0625rem, 2vw, 1.25rem);
+}
+
+.brand-assets {
+  display: grid;
+  gap: var(--spacing-xl);
+}
+
+.brand-asset-card {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1.4fr);
+  gap: var(--spacing-lg);
+  align-items: stretch;
+  padding: var(--spacing-lg);
+  background: var(--color-white);
+  border: 1px solid rgba(44, 24, 16, 0.08);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.brand-asset-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(44, 24, 16, 0.08);
+}
+
+.brand-asset-preview--light {
+  background:
+    linear-gradient(45deg, rgba(44, 24, 16, 0.035) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(44, 24, 16, 0.035) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(44, 24, 16, 0.035) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(44, 24, 16, 0.035) 75%),
+    var(--color-cream);
+  background-position: 0 0, 0 12px, 12px -12px, -12px 0;
+  background-size: 24px 24px;
+}
+
+.brand-asset-preview--dark {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(253, 248, 240, 0.08), transparent 16rem),
+    var(--color-dark-bg);
+}
+
+.brand-asset-preview img {
+  max-width: min(100%, 420px);
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.brand-asset-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-md);
+  min-width: 0;
+}
+
+.brand-asset-header {
+  max-width: 640px;
+}
+
+.brand-asset-header .section-title {
+  margin-bottom: var(--spacing-xs);
+}
+
+.brand-asset-header p {
+  color: var(--color-dark-muted);
+}
+
+.brand-file-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(44, 24, 16, 0.08);
+  border-radius: var(--radius-md);
+}
+
+.brand-file-table {
+  width: 100%;
+  min-width: 260px;
+  border-collapse: collapse;
+  font-family: var(--font-accent);
+  font-size: 0.9375rem;
+}
+
+.brand-file-table th,
+.brand-file-table td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(44, 24, 16, 0.08);
+}
+
+.brand-file-table th {
+  background: var(--color-cream);
+  color: var(--color-dark-soft);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand-file-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.brand-file-table td:first-child {
+  color: var(--color-dark-muted);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.brand-file-table a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 5rem;
+  padding: 0.35rem 0.85rem;
+  color: var(--color-white);
+  background: var(--color-primary);
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.brand-file-table a:hover {
+  color: var(--color-white);
+  background: var(--color-primary-light);
+}
+
+@media (max-width: 860px) {
+  .brand-asset-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .brand-hero {
+    padding-top: var(--spacing-lg);
+  }
+
+  .brand-asset-card {
+    padding: var(--spacing-md);
+  }
+
+  .brand-asset-preview {
+    min-height: 200px;
+    padding: var(--spacing-md);
+  }
+}
